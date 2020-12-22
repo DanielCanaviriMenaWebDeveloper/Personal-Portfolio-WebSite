@@ -118,10 +118,6 @@ img {
 
 /*===== LAYOUT =====*/
 
-.l-header {
-    background-color: blueviolet;
-}
-
 .bd-container {
     background-color: chartreuse;
     max-width: 1024px;
@@ -135,7 +131,45 @@ img {
     gap: 1.5rem;
 }
 
+.l-header {
+    width: 100%;
+    position: fixed;
+    top: 0;
+    left: 0;
+    z-index: var(--z-fixed);
+    background-color: #000;
+    /* background-color: blueviolet; */
+}
+
 /*===== NAV =====*/
+.nav {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    height: var(--header-height);
+}
+
+@media screen and (max-width: 768px) {
+    .nav__menu {
+        position: fixed;
+        top: var(--header-height);
+        left: 0;
+        width: 100%;
+        text-align: center;
+        padding-top: 1.5rem;
+        background-color: #000;
+        transition: .4s;
+        box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+        border-radius: 0 0 1rem 1rem;
+    }
+}
+
+
+
+
+
+
+
 
 /* Show menu */
 /* Active menu */
